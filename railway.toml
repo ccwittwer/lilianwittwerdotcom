@@ -5,6 +5,4 @@ buildCommand = "yarn install && yarn build"
 [deploy]
 startCommand = "yarn preview"
 healthcheckPath = "/"
-healthcheckTimeout = 100
-restartPolicyType = "on-failure"
-restartPolicyMaxRetries = 10 
+healthcheckTimeout = 100 
