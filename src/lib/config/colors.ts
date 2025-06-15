@@ -11,6 +11,11 @@ export const schoolColors: Record<string, ColorScheme> = {
 		// secondary: '#133258', // TSC Dark Blue
 		tertiary: '#8B0000' // Bright Blue
 	},
+	bga: {
+		primary: '#002E5D', // BGA Navy Blue
+		secondary: '#FFD100', // BGA Gold
+		tertiary: '#FFFFFF' // White
+	},
 	stanford: {
 		primary: '#8C1515', // Cardinal Red
 		secondary: '#4D4F53', // Cool Grey

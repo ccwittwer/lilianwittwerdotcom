@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Ticker from '$lib/components/Ticker.svelte';
 	import {
 		achievements,
 		galleryItems,
-		gameStats,
 		newsArticles,
 		playerInfo,
 		playerInfoList,
@@ -132,8 +130,6 @@
 </svelte:head>
 
 <main class="bg-gradient-primary min-h-screen text-white">
-	<Ticker {gameStats} />
-
 	<!-- Hero Section with Split Screen -->
 	<section
 		id="hero"
@@ -268,11 +264,7 @@
 						</div>
 					</a>
 
-					<a
-						href="https://www.battlegroundacademy.org/"
-						class="group hover:text-tertiary transition-colors"
-						target="_blank"
-					>
+					<a href="/bga" class="group hover:text-tertiary transition-colors">
 						<div
 							class="flex transform items-center transition-transform duration-200 group-hover:scale-102"
 						>
@@ -1135,26 +1127,6 @@
 
 	.field-link:hover::before {
 		opacity: 1;
-	}
-
-	.ticker-container {
-		width: 100%;
-		overflow: hidden;
-	}
-
-	.ticker-content {
-		display: inline-block;
-		animation: ticker 30s linear infinite;
-		white-space: nowrap;
-	}
-
-	@keyframes ticker {
-		0% {
-			transform: translateX(100%);
-		}
-		100% {
-			transform: translateX(-100%);
-		}
 	}
 
 	/* Navigation transitions */

@@ -35,21 +35,7 @@ export const newsArticles = [
 		source: 'US Soccer',
 		date: 'May 31, 2024',
 		url: 'https://www.ussoccer.com/stories/2024/05/eighty-players-gather-outside-of-san-diego-for-second-girls-u-14-national-identification-camp-of-2024'
-	},
-	{
-		title: 'Rising Star: Player of the Week Feature',
-		source: 'High School Sports Network',
-		date: 'February 15, 2024',
-		url: 'https://example.com/article3'
 	}
-];
-
-export const topAchievements = [
-	'All-State First Team Selection',
-	'Regional MVP Award',
-	'State Championship Runner-Up',
-	'National Team Camp Invite',
-	'ECNL All-Conference Team'
 ];
 
 export const galleryItems = [

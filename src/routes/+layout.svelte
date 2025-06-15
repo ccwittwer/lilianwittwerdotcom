@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Ticker from '$lib/components/Ticker.svelte';
+	import { gameStats } from '$lib/data';
 	import '../app.css';
 
 	// onMount(() => {
@@ -10,3 +12,4 @@
 </script>
 
 <slot />
+<Ticker {gameStats} />
