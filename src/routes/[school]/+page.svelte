@@ -189,7 +189,7 @@
 						style="animation-delay: 0.4s"
 					>
 						{playerInfo.position}
-						<span class="border-secondary ml-2 border-l-4 pl-3 font-semibold"
+						<span class="border-secondary ml-2 border-l-4 pl-3 font-semibold whitespace-nowrap"
 							>{playerInfo.club}</span
 						>
 					</p>
@@ -198,7 +198,7 @@
 						style="animation-delay: 0.4s"
 					>
 						Class of {playerInfo.class}
-						<span class="border-secondary ml-2 border-l-4 pl-3 font-semibold"
+						<span class="border-secondary ml-2 border-l-4 pl-3 font-semibold whitespace-nowrap"
 							>{playerInfo.school}</span
 						>
 					</p>
