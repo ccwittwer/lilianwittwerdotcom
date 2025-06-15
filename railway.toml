@@ -5,4 +5,10 @@ buildCommand = "yarn install && yarn build"
 [deploy]
 startCommand = "yarn preview"
 healthcheckPath = "/"
-healthcheckTimeout = 100 
+healthcheckTimeout = 100
+
+[phases.setup]
+nixPkgs = ["yarn"]
+
+[phases.install]
+cmds = ["yarn install"] 
