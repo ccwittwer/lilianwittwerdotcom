@@ -887,7 +887,7 @@
 					</span>
 				</a> -->
 				<a
-					href="https://instagram.com/your_username"
+					href="https://instagram.com/lilianwittwer7"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
@@ -903,7 +903,7 @@
 					</span>
 				</a>
 				<a
-					href="https://twitter.com/your_username"
+					href="https://twitter.com/lilianwittwer"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
