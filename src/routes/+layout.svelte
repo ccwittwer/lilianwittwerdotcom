@@ -19,5 +19,5 @@
 	<meta name="description" content="Lilian Wittwer - Soccer Player Profile" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="apple-touch-icon" href="/favicon.svg" />
-	<meta name="theme-color" content="#000000" />
+	<meta name="theme-color" content="#002B5C" />
 </svelte:head>
