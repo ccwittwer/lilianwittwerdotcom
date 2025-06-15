@@ -7,8 +7,8 @@ export interface ColorScheme {
 export const schoolColors: Record<string, ColorScheme> = {
 	default: {
 		primary: '#0054a2', // TSC Blue
-		secondary: '#bf1f26', // TSC Red
-		// secondary: '#133258', // TSC Dark Blue
+		// secondary: '#bf1f26', // TSC Red
+		secondary: '#133258', // TSC Dark Blue
 		tertiary: '#8B0000' // Bright Blue
 	},
 	bga: {

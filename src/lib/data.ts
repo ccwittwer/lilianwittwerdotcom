@@ -39,22 +39,28 @@ export const newsArticles = [
 ];
 
 export const galleryItems = [
-	'/action_white.jpg',
-	'/action_white.jpg',
-	'/action_white.jpg',
-	'/action_white.jpg',
-	'/action_white.jpg',
-	'/action_white.jpg',
 	{
 		thumbnail: '/action_winter.jpg',
-		url: 'https://www.youtube.com/embed/example1',
+		url: 'https://www.youtube.com/embed/8njR31p4MtM',
 		description: 'Attacking Highlights'
 	},
 	{
 		thumbnail: '/action_white.jpg',
-		url: 'https://www.youtube.com/embed/example2',
+		url: 'https://www.youtube.com/embed/hoaWQwd6NoA',
 		description: 'Defensive Highlights'
-	}
+	},
+	{
+		thumbnail: '/action_winter.jpg',
+		url: 'https://www.youtube.com/embed/Exn_QLdhVTc',
+		description: 'Random Highlights'
+	},
+	{
+		thumbnail: '/action_white.jpg',
+		url: 'https://www.youtube.com/embed/q0w0B5thotk',
+		description: 'Scoring Highlights'
+	},
+	'/action_white.jpg',
+	'/action_white.jpg'
 ];
 
 export const playerInfo = {
