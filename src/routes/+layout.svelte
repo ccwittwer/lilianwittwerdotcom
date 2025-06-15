@@ -13,3 +13,11 @@
 
 <slot />
 <Ticker {gameStats} />
+
+<svelte:head>
+	<title>Lilian Wittwer - Soccer Player</title>
+	<meta name="description" content="Lilian Wittwer - Soccer Player Profile" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="apple-touch-icon" href="/favicon.svg" />
+	<meta name="theme-color" content="#000000" />
+</svelte:head>
