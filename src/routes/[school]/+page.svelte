@@ -23,6 +23,16 @@
 	let message = '';
 	let isSubmitting = false;
 	let submitStatus = { type: '', message: '' };
+	let isNavExpanded = true;
+	let navTimeout: NodeJS.Timeout;
+
+	function resetNavTimeout() {
+		if (navTimeout) clearTimeout(navTimeout);
+		isNavExpanded = true;
+		navTimeout = setTimeout(() => {
+			if (showNav) isNavExpanded = false;
+		}, 2000);
+	}
 
 	async function handleSubmit() {
 		isSubmitting = true;
@@ -60,6 +70,11 @@
 	function handleScroll() {
 		const scrollY = window.scrollY;
 		showNav = scrollY > 0;
+		if (showNav) {
+			resetNavTimeout();
+		} else {
+			isNavExpanded = false;
+		}
 
 		// Determine which section is in view
 		const sections = ['hero', 'gallery', 'profile', 'contact'];
@@ -969,8 +984,16 @@
 	class:opacity-100={showNav}
 	class:translate-x-0={showNav}
 	class:-translate-x-full={!showNav}
+	on:mouseenter={resetNavTimeout}
+	on:mouseleave={() => {
+		if (showNav) {
+			navTimeout = setTimeout(() => {
+				isNavExpanded = false;
+			}, 2000);
+		}
+	}}
 >
-	<div class="relative h-52 w-36">
+	<div class="relative h-52 w-36 transition-all duration-300" class:w-12={!isNavExpanded}>
 		<!-- Field Background with Image -->
 		<div class="absolute inset-0 overflow-hidden rounded-lg">
 			<img
@@ -984,38 +1007,50 @@
 				<a
 					href="#hero"
 					class="group flex h-1/4 w-full items-center justify-center transition-all hover:bg-white/10 {currentSection ===
-					'hero'
+						'hero' && isNavExpanded
 						? 'bg-white/20'
 						: ''}"
 				>
-					<span class="text-xs font-medium text-white">Home</span>
+					<span
+						class="text-xs font-medium text-white transition-opacity duration-300"
+						class:opacity-0={!isNavExpanded}>Home</span
+					>
 				</a>
 				<a
 					href="#gallery"
 					class="group flex h-1/4 w-full items-center justify-center transition-all hover:bg-white/10 {currentSection ===
-					'gallery'
+						'gallery' && isNavExpanded
 						? 'bg-white/20'
 						: ''}"
 				>
-					<span class="text-xs font-medium text-white">Highlights</span>
+					<span
+						class="text-xs font-medium text-white transition-opacity duration-300"
+						class:opacity-0={!isNavExpanded}>Highlights</span
+					>
 				</a>
 				<a
 					href="#profile"
 					class="group flex h-1/4 w-full items-center justify-center transition-all hover:bg-white/10 {currentSection ===
-					'profile'
+						'profile' && isNavExpanded
 						? 'bg-white/20'
 						: ''}"
 				>
-					<span class="text-xs font-medium text-white">Profile</span>
+					<span
+						class="text-xs font-medium text-white transition-opacity duration-300"
+						class:opacity-0={!isNavExpanded}>Profile</span
+					>
 				</a>
 				<a
 					href="#contact"
 					class="group flex h-1/4 w-full items-center justify-center transition-all hover:bg-white/10 {currentSection ===
-					'contact'
+						'contact' && isNavExpanded
 						? 'bg-white/20'
 						: ''}"
 				>
-					<span class="text-xs font-medium text-white">Contact</span>
+					<span
+						class="text-xs font-medium text-white transition-opacity duration-300"
+						class:opacity-0={!isNavExpanded}>Contact</span
+					>
 				</a>
 			</div>
 		</div>
@@ -1120,5 +1155,15 @@
 		100% {
 			transform: translateX(-100%);
 		}
+	}
+
+	/* Navigation transitions */
+	.nav-transition {
+		transition: all 0.3s ease-in-out;
+	}
+
+	/* Ensure smooth width transition */
+	.w-12 {
+		width: 3rem;
 	}
 </style>
