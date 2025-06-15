@@ -103,6 +103,10 @@ export const playerInfoList = [
 		value: playerInfo.school
 	},
 	{
+		key: 'Hometown',
+		value: playerInfo.hometown
+	},
+	{
 		key: 'GPA',
 		value: playerInfo.gpa
 	},
