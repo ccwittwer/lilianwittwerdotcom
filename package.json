@@ -17,7 +17,7 @@
 		"db:studio": "drizzle-kit studio"
 	},
 	"engines": {
-		"node": ">=20.x"
+		"node": "20.x"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.1.1",
