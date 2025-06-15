@@ -31,7 +31,7 @@
 		isNavExpanded = true;
 		navTimeout = setTimeout(() => {
 			if (showNav) isNavExpanded = false;
-		}, 2000);
+		}, 1500);
 	}
 
 	async function handleSubmit() {
@@ -989,7 +989,7 @@
 		if (showNav) {
 			navTimeout = setTimeout(() => {
 				isNavExpanded = false;
-			}, 2000);
+			}, 1500);
 		}
 	}}
 >

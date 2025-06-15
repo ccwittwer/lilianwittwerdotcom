@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { schoolColors } from '$lib/config/colors';
 	import '../../app.css';
 
-	$: school = $page.params.school || 'default';
+	$: school = page.url.pathname.split('/')[1] || 'default';
 	$: colors = schoolColors[school] || schoolColors.default;
 
 	// Update CSS variables when colors change
