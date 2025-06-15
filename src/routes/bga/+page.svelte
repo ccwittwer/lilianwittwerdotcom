@@ -258,37 +258,6 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- Contact Section -->
-	<section class="relative border-t border-white/10 py-16">
-		<div class="mx-auto max-w-4xl px-4">
-			<h2 class="text-secondary mb-8 text-3xl font-bold">Get Involved</h2>
-			<div class="prose prose-invert max-w-none">
-				<p class="text-lg">
-					Interested in learning more about how BGA can prepare you for college success? Contact us
-					today to schedule a visit or learn more about our programs.
-				</p>
-				<div class="mt-8 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-					<a
-						href="https://www.battlegroundacademy.org/admission"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="bg-secondary text-primary hover:bg-secondary/90 inline-flex items-center justify-center rounded-lg px-6 py-3 text-center text-sm font-medium transition-colors"
-					>
-						Schedule a Visit
-					</a>
-					<a
-						href="https://www.battlegroundacademy.org/athletics"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="border-secondary text-secondary hover:bg-secondary/10 inline-flex items-center justify-center rounded-lg border-2 px-6 py-3 text-center text-sm font-medium transition-colors"
-					>
-						Learn More About Athletics
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
 </main>
 
 <style>
