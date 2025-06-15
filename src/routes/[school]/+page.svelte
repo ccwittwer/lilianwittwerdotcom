@@ -24,6 +24,32 @@
 	let isNavExpanded = true;
 	let navTimeout: NodeJS.Timeout;
 
+	// Image modal state
+	let showImageModal = false;
+	let selectedImage = '';
+
+	function openImageModal(item: string | { thumbnail: string; url: string; description: string }) {
+		if (typeof item === 'string') {
+			selectedImage = item;
+			showImageModal = true;
+			document.body.style.overflow = 'hidden';
+		} else {
+			openVideoModal(item.url);
+		}
+	}
+
+	function closeImageModal() {
+		showImageModal = false;
+		document.body.style.overflow = '';
+	}
+
+	// Close modal on escape key
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape' && showImageModal) {
+			closeImageModal();
+		}
+	}
+
 	function resetNavTimeout() {
 		if (navTimeout) clearTimeout(navTimeout);
 		isNavExpanded = true;
@@ -413,7 +439,7 @@
 					</a>
 					<a
 						href="#profile"
-						class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
+						class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
 						style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 					>
 						<span class="flex items-center justify-center">
@@ -469,39 +495,35 @@
 		<div class="absolute inset-0 bg-[url('/action_white.jpg')] bg-cover bg-center opacity-10">
 			<div class="ken-burns-zoom"></div>
 		</div>
-		<!-- <div class="absolute inset-0 overflow-hidden opacity-10">
-			<video class="h-full w-full object-cover" autoplay loop muted playsinline>
-				<source src="/soccer-background.mp4" type="video/mp4" />
-			</video>
-		</div> -->
 		<div class="to-primary/30 absolute inset-0 bg-gradient-to-b from-black/30"></div>
 
 		<div class="mx-auto w-full max-w-6xl py-16 md:py-32">
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
 				{#each galleryItems as item, i}
 					<div
-						class="group hover:shadow-primary/20 relative transform overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						class="group hover:shadow-primary/20 relative transform cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						on:click={() => openImageModal(item)}
 					>
 						{#if typeof item === 'string'}
-							<img
-								src={item}
-								alt="Player action shot"
-								class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110 md:h-80"
-							/>
+							<img src={item} alt="Gallery image" class="h-64 w-full object-cover" />
 							<div
-								class="from-primary/90 absolute inset-0 flex items-end bg-gradient-to-t to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:p-6"
+								class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 							>
-								<div
-									class="translate-y-4 transform text-white transition-transform duration-300 group-hover:translate-y-0"
-								>
-									<p class="text-primary-light text-xs md:text-sm">Click to view full size</p>
+								<div class="absolute bottom-4 left-4 text-white">
+									<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+										/>
+									</svg>
 								</div>
 							</div>
 						{:else}
 							<button
 								type="button"
-								class="relative flex h-64 w-full cursor-pointer items-center justify-center bg-black/40 md:h-80"
-								on:click={() => openVideoModal(item.url)}
+								class="relative flex h-64 w-full cursor-pointer items-center justify-center bg-black/40"
 							>
 								<img
 									src={item.thumbnail}
@@ -570,6 +592,34 @@
 					/>
 				</div>
 			</div>
+		</div>
+	{/if}
+
+	<!-- Image Modal -->
+	{#if showImageModal}
+		<div
+			class="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+			on:click={closeImageModal}
+		>
+			<button
+				class="absolute top-4 right-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
+				on:click={closeImageModal}
+			>
+				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M6 18L18 6M6 6l12 12"
+					/>
+				</svg>
+			</button>
+			<img
+				src={selectedImage}
+				alt="Full size image"
+				class="max-h-[90vh] max-w-[90vw] object-contain"
+				on:click|stopPropagation
+			/>
 		</div>
 	{/if}
 
@@ -1048,6 +1098,8 @@
 		</div>
 	</div>
 </div>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <style>
 	:global(html) {
