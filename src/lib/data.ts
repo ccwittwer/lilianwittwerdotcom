@@ -12,14 +12,8 @@ export const gameStats = [
 	{ category: 'SEASON', content: '18 Goals • 12 Assists • 20 Games' },
 	{ category: 'CAREER', content: '45 Goals • 38 Assists • 60 Games' },
 	{ category: 'HIGHLIGHTS', content: 'Hat Trick vs. Ensworth • 4 Goals vs. Brentwood' },
-	{ category: 'AWARDS', content: 'All-State First Team • Regional MVP' },
-	{ category: 'NEWS', content: 'All-State First Team • Regional MVP' },
-	{ category: 'AWARDS', content: 'All-State First Team • Regional MVP' },
-	{
-		category: 'NEWS',
-		content: 'BGA battles, falls short of ECS in state quarterfinals (Oct 2024)',
-		url: 'https://www.williamsonherald.com/sports/soccer-bga-battles-falls-short-of-ecs-in-state-quarterfinals/article_2825ba52-8f11-11ef-aa5b-23a252da8271.html'
-	}
+	{ category: 'AWARDS', content: '2024 High School Region All-Tournament Team' },
+	{ category: 'AWARDS', content: '2024 High School All-District' }
 ];
 
 export const newsArticles = [
@@ -120,35 +114,35 @@ export const seasonStats = [
 	{
 		group: 'ECNL',
 		stats: [
-			{
-				category: 'Goals',
-				value: 15
-			},
-			{
-				category: 'Assists',
-				value: 10
-			},
-			{
-				category: 'Minutes Played',
-				value: 1600
-			}
+			// {
+			// 	category: 'Goals',
+			// 	value: 15
+			// },
+			// {
+			// 	category: 'Assists',
+			// 	value: 10
+			// },
+			// {
+			// 	category: 'Minutes Played',
+			// 	value: 1600
+			// }
 		]
 	},
 	{
 		group: 'High School',
 		stats: [
-			{
-				category: 'Goals',
-				value: 15
-			},
-			{
-				category: 'Assists',
-				value: 10
-			},
-			{
-				category: 'Minutes Played',
-				value: 1600
-			}
+			// {
+			// 	category: 'Goals',
+			// 	value: 15
+			// },
+			// {
+			// 	category: 'Assists',
+			// 	value: 10
+			// },
+			// {
+			// 	category: 'Minutes Played',
+			// 	value: 1600
+			// }
 		]
 	}
 ];
@@ -168,8 +162,8 @@ export const achievements = [
 	'TN State Cup U13 Champions 2023',
 	'TN State Cup U15 Finalists 2024',
 	'2x ODP South Region Camp',
-	'High School Region All-Tournament Team',
-	'High School All-District'
+	'2024 High School Region All-Tournament Team',
+	'2024 High School All-District'
 ];
 
 export const upcomingSchedule = [
