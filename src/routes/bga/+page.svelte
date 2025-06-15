@@ -40,7 +40,7 @@
 	</button>
 
 	<!-- Hero Section -->
-	<section class="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden">
+	<section class="relative flex min-h-[40vh] flex-col items-center justify-center overflow-hidden">
 		<div class="absolute inset-0 z-0">
 			<img
 				src="/BGA_logo-seal-white.svg"
@@ -81,7 +81,7 @@
 		<div class="mx-auto max-w-4xl px-4">
 			<h2 class="text-secondary mb-8 text-3xl font-bold">Leadership</h2>
 			<div class="prose prose-invert max-w-none">
-				<div class="border-secondary/20 mt-8 rounded-lg border bg-white/5 p-6">
+				<div class="">
 					<h3 class="text-secondary mb-4 text-2xl font-semibold">Head Coach Jan Morrissey</h3>
 					<p class="mb-4">
 						Under Coach Morrissey's leadership, the program has achieved remarkable success. In
@@ -266,7 +266,7 @@
 	}
 
 	.prose {
-		max-width: 65ch;
+		/* max-width: 65ch; */
 	}
 
 	.prose p {

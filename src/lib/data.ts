@@ -59,8 +59,8 @@ export const galleryItems = [
 		url: 'https://www.youtube.com/embed/q0w0B5thotk',
 		description: 'Scoring Highlights'
 	},
-	'/action_white.jpg',
-	'/action_white.jpg'
+	'/all_district.jpeg',
+	'/regional_all_tourney.jpeg'
 ];
 
 export const playerInfo = {
@@ -105,6 +105,10 @@ export const playerInfoList = [
 	{
 		key: 'GPA',
 		value: playerInfo.gpa
+	},
+	{
+		key: 'NCAA ID #',
+		value: '2411457668'
 	}
 ];
 
@@ -159,9 +163,9 @@ export const achievements = [
 	'4x US Soccer Talent ID Center',
 	'TN State Cup U13 Champions 2023',
 	'TN State Cup U15 Finalists 2024',
-	'All-Region Team',
-	'All-District Team',
-	'TN ODP'
+	'2x ODP South Region Camp',
+	'High School Region All-Tournament Team',
+	'High School All-District'
 ];
 
 export const upcomingSchedule = [
