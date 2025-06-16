@@ -492,7 +492,9 @@
 		class="relative flex min-h-screen items-center overflow-hidden border-b-2 border-white/10 px-4"
 	>
 		<!-- Background with Ken Burns effect -->
-		<div class="absolute inset-0 bg-[url('/action_white.jpg')] bg-cover bg-center opacity-10">
+		<div
+			class="absolute inset-0 bg-[url('/BGA_dribbling_action.JPG')] bg-cover bg-center opacity-10"
+		>
 			<div class="ken-burns-zoom"></div>
 		</div>
 		<div class="to-primary/30 absolute inset-0 bg-gradient-to-b from-black/30"></div>
@@ -629,7 +631,7 @@
 		class="relative min-h-screen overflow-hidden border-b-2 border-white/10 px-4 pt-16 pb-24 md:py-32"
 	>
 		<!-- Background with Ken Burns effect -->
-		<div class="absolute inset-0 bg-[url('/action_winter.jpg')] bg-cover bg-center opacity-10">
+		<div class="absolute inset-0 bg-[url('/BGA_passing_action.JPG')] bg-cover bg-center opacity-10">
 			<div class="ken-burns-zoom"></div>
 		</div>
 		<div class="to-primary/30 absolute inset-0 bg-gradient-to-b from-black/30"></div>
