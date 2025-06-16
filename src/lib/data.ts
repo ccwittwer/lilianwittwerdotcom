@@ -1,21 +1,23 @@
+/** Ticker Items */
 export const gameStats = [
-	{ category: 'ECNL', content: 'TSC 3 - 1 South Carolina • 2 Goals, 1 Assist' },
+	// { category: 'ECNL', content: 'TSC 3 - 1 South Carolina • 2 Goals, 1 Assist' },
 
-	{ category: 'ECNL', content: '2024/25 SEASON - 15 Goals • 12 Assists • 20 Games' },
+	// { category: 'ECNL', content: '2024/25 SEASON - 15 Goals • 12 Assists • 20 Games' },
 	{
-		category: 'HIGH SCHOOL',
+		category: 'NEWS',
 		content: 'BGA battles, falls short of ECS in state quarterfinals - Oct 2024',
 		url: 'https://www.williamsonherald.com/sports/soccer-bga-battles-falls-short-of-ecs-in-state-quarterfinals/article_2825ba52-8f11-11ef-aa5b-23a252da8271.html'
 	},
-	{ category: 'HIGH SCHOOL', content: '2024 SEASON - 17 Goals • 12 Assists • 20 Games' },
-	{ category: 'HIGH SCHOOL', content: '2025 SEASON - 17 Goals • 12 Assists • 20 Games' },
-	{ category: 'SEASON', content: '18 Goals • 12 Assists • 20 Games' },
-	{ category: 'CAREER', content: '45 Goals • 38 Assists • 60 Games' },
-	{ category: 'HIGHLIGHTS', content: 'Hat Trick vs. Ensworth • 4 Goals vs. Brentwood' },
+	// { category: 'HIGH SCHOOL', content: '2024 SEASON - 17 Goals • 12 Assists • 20 Games' },
+	// { category: 'HIGH SCHOOL', content: '2025 SEASON - 17 Goals • 12 Assists • 20 Games' },
+	// { category: 'SEASON', content: '18 Goals • 12 Assists • 20 Games' },
+	// { category: 'CAREER', content: '45 Goals • 38 Assists • 60 Games' },
+	// { category: 'HIGHLIGHTS', content: 'Hat Trick vs. Ensworth • 4 Goals vs. Brentwood' },
 	{ category: 'AWARDS', content: '2024 High School Region All-Tournament Team' },
 	{ category: 'AWARDS', content: '2024 High School All-District' }
 ];
 
+/** News Articles */
 export const newsArticles = [
 	{
 		title: 'BGA battles, falls short of ECS in state quarterfinals',
@@ -32,6 +34,7 @@ export const newsArticles = [
 	}
 ];
 
+/** Gallery/Highlights Items */
 export const galleryItems = [
 	{
 		thumbnail: '/action_winter.jpg',
@@ -57,20 +60,20 @@ export const galleryItems = [
 	'/regional_all_tourney.jpeg'
 ];
 
+/** General Player Info */
 export const playerInfo = {
 	name: 'Lilian Wittwer',
 	position: 'Striker & Attacking Midfielder',
 	hometown: 'Franklin, Tennessee',
 	class: '2028',
 	foot: 'Both',
-	// height: '6\'0"',
-	// weight: '165 lbs',
 	jersey: '7',
 	club: 'Tennessee Soccer Club',
 	school: 'Battle Ground Academy',
 	gpa: '4.25'
 };
 
+/** Player Profile Info List */
 export const playerInfoList = [
 	{
 		key: 'Name',
@@ -110,52 +113,45 @@ export const playerInfoList = [
 	}
 ];
 
+/** Season Stats */
 export const seasonStats = [
 	{
-		group: 'ECNL',
+		group: 'ECNL 2025/26',
 		stats: [
-			// {
-			// 	category: 'Goals',
-			// 	value: 15
-			// },
-			// {
-			// 	category: 'Assists',
-			// 	value: 10
-			// },
-			// {
-			// 	category: 'Minutes Played',
-			// 	value: 1600
-			// }
+			{
+				category: 'Goals',
+				value: '--'
+			},
+			{
+				category: 'Assists',
+				value: '--'
+			},
+			{
+				category: 'Minutes Played',
+				value: '--'
+			}
 		]
 	},
 	{
-		group: 'High School',
+		group: 'High School 2025',
 		stats: [
-			// {
-			// 	category: 'Goals',
-			// 	value: 15
-			// },
-			// {
-			// 	category: 'Assists',
-			// 	value: 10
-			// },
-			// {
-			// 	category: 'Minutes Played',
-			// 	value: 1600
-			// }
+			{
+				category: 'Goals',
+				value: '--'
+			},
+			{
+				category: 'Assists',
+				value: '--'
+			},
+			{
+				category: 'Minutes Played',
+				value: '--'
+			}
 		]
 	}
 ];
 
-// Stats
-export const stats = {
-	goals: 15,
-	assists: 12,
-	gamesPlayed: 20,
-	minutesPlayed: 1600
-};
-
-// Achievements
+/** Key Achievements */
 export const achievements = [
 	'US Soccer U14 National ID Camp 2024',
 	'4x US Soccer Talent ID Center',
@@ -166,6 +162,7 @@ export const achievements = [
 	'2024 High School All-District'
 ];
 
+/** Upcoming Schedule; first item shows on ticker */
 export const upcomingSchedule = [
 	{
 		date: 'June 15, 2025',
