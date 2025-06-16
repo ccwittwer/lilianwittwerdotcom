@@ -37,27 +37,29 @@ export const newsArticles = [
 /** Gallery/Highlights Items */
 export const galleryItems = [
 	{
-		thumbnail: '/action_winter.jpg',
-		url: 'https://www.youtube.com/embed/8njR31p4MtM',
-		description: 'Attacking Highlights'
+		thumbnail: '/USN_freekick_thumbnail.png',
+		url: 'https://www.youtube.com/embed/W83rNsH3IQM',
+		description: 'Last second game winning free kick vs USN'
 	},
 	{
 		thumbnail: '/action_white.jpg',
 		url: 'https://www.youtube.com/embed/hoaWQwd6NoA',
-		description: 'Defensive Highlights'
+		description: 'Defending'
 	},
 	{
 		thumbnail: '/action_winter.jpg',
 		url: 'https://www.youtube.com/embed/Exn_QLdhVTc',
-		description: 'Random Highlights'
+		description: 'Set Pieces'
 	},
 	{
 		thumbnail: '/action_white.jpg',
 		url: 'https://www.youtube.com/embed/q0w0B5thotk',
 		description: 'Scoring Highlights'
 	},
+	'/2024_USYNT_announcement_instagram.png',
 	'/all_district.jpeg',
-	'/regional_all_tourney.jpeg'
+	'/regional_all_tourney.jpeg',
+	'/Oct2024_ID_Camp_annc_instagram.png'
 ];
 
 /** General Player Info */
