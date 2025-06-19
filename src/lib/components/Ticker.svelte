@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class="fixed right-0 bottom-0 left-0 z-50 hidden border-t border-white/10 bg-black py-3 md:block"
+	class="fixed bottom-0 left-0 right-0 z-50 hidden border-t border-white/10 bg-black py-3 md:block"
 >
 	<div class="mx-auto flex items-center px-4">
 		<span class="text-ticker mr-4 min-w-[180px] border-r border-white pr-4 font-bold"
@@ -32,7 +32,7 @@
 		>
 		<div class="relative flex-1">
 			<div
-				class="transition-opacity duration-800"
+				class="duration-800 transition-opacity"
 				class:opacity-0={!isVisible}
 				class:opacity-100={isVisible}
 			>
@@ -55,11 +55,13 @@
 			<div class="flex items-center gap-4">
 				<div class="text-ticker border-r border-white pr-4 font-bold">NEXT GAME</div>
 				<div class="text-white">
-					<span class="font-medium">{nextGame.date} • {nextGame.time}</span>
-					<span class="mx-2">•</span>
-					<span>vs {nextGame.opponent}</span>
-					<!-- <span class="mx-2">•</span> -->
-					<!-- <span>{nextGame.location}</span> -->
+					<a href="#schedule">
+						<span class="font-medium">{nextGame.date} • {nextGame.time}</span>
+						<span class="mx-2">•</span>
+						<span>vs {nextGame.opponent}</span>
+						<!-- <span class="mx-2">•</span> -->
+						<!-- <span>{nextGame.location}</span> -->
+					</a>
 				</div>
 			</div>
 		</div>

@@ -189,7 +189,7 @@
 						style="animation-delay: 0.4s"
 					>
 						{playerInfo.position}
-						<span class="border-secondary ml-2 border-l-4 pl-3 font-semibold whitespace-nowrap"
+						<span class="border-secondary ml-2 whitespace-nowrap border-l-4 pl-3 font-semibold"
 							>{playerInfo.club}</span
 						>
 					</p>
@@ -198,7 +198,7 @@
 						style="animation-delay: 0.4s"
 					>
 						Class of {playerInfo.class}
-						<span class="border-secondary ml-2 border-l-4 pl-3 font-semibold whitespace-nowrap"
+						<span class="border-secondary ml-2 whitespace-nowrap border-l-4 pl-3 font-semibold"
 							>{playerInfo.school}</span
 						>
 					</p>
@@ -252,11 +252,11 @@
 				>
 					<a
 						href="https://www.tennesseesoccerclub.org/"
-						class="group hover:text-tertiary transition-colors"
+						class="hover:text-tertiary group transition-colors"
 						target="_blank"
 					>
 						<div
-							class="mb-8 flex transform items-center transition-transform duration-200 group-hover:scale-102"
+							class="group-hover:scale-102 mb-8 flex transform items-center transition-transform duration-200"
 						>
 							<img src="/ECNL_Badge.png" alt="ECNL Badge Logo" class="mr-3 w-8 md:mr-4 md:w-8" />
 							<div>
@@ -272,11 +272,11 @@
 
 					<a
 						href="https://www.ussoccer.com/stories/2024/05/eighty-players-gather-outside-of-san-diego-for-second-girls-u-14-national-identification-camp-of-2024"
-						class="group hover:text-tertiary transition-colors"
+						class="hover:text-tertiary group transition-colors"
 						target="_blank"
 					>
 						<div
-							class="mb-8 flex transform items-center transition-transform duration-200 group-hover:scale-102"
+							class="group-hover:scale-102 mb-8 flex transform items-center transition-transform duration-200"
 						>
 							<img src="/us_soccer_logo.png" alt="US Soccer Logo" class="mr-3 w-8 md:mr-4 md:w-8" />
 							<div>
@@ -290,9 +290,9 @@
 						</div>
 					</a>
 
-					<a href="/bga" class="group hover:text-tertiary transition-colors">
+					<a href="/bga" class="hover:text-tertiary group transition-colors">
 						<div
-							class="flex transform items-center transition-transform duration-200 group-hover:scale-102"
+							class="group-hover:scale-102 flex transform items-center transition-transform duration-200"
 						>
 							<img
 								src="/BGA_logo-seal-white.svg"
@@ -411,7 +411,7 @@
 				>
 					<a
 						href="#gallery"
-						class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
+						class="bg-primary hover:bg-primary-dark hover:shadow-primary/20 group transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
 						style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 					>
 						<span class="flex items-center justify-center">
@@ -439,7 +439,7 @@
 					</a>
 					<a
 						href="#profile"
-						class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold whitespace-nowrap text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
+						class="bg-primary hover:bg-primary-dark hover:shadow-primary/20 group transform whitespace-nowrap rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
 						style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 					>
 						<span class="flex items-center justify-center">
@@ -461,7 +461,7 @@
 					</a>
 					<a
 						href="#contact"
-						class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
+						class="bg-primary hover:bg-primary-dark hover:shadow-primary/20 group transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
 						style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 					>
 						<span class="flex items-center justify-center">
@@ -503,7 +503,7 @@
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
 				{#each galleryItems as item, i}
 					<div
-						class="group hover:shadow-primary/20 relative transform cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						class="hover:shadow-primary/20 group relative transform cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
 						on:click={() => openImageModal(item)}
 					>
 						{#if typeof item === 'string'}
@@ -552,7 +552,7 @@
 									/>
 								</svg>
 								{#if item.description}
-									<div class="absolute right-0 bottom-0 left-0 bg-black/60 p-4 text-white">
+									<div class="absolute bottom-0 left-0 right-0 bg-black/60 p-4 text-white">
 										<p class="text-sm">{item.description}</p>
 									</div>
 								{/if}
@@ -572,7 +572,7 @@
 		>
 			<div class="relative w-full max-w-4xl p-4" on:click|stopPropagation>
 				<button
-					class="absolute -top-2 -right-2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
+					class="absolute -right-2 -top-2 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
 					on:click={closeVideoModal}
 				>
 					<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -604,7 +604,7 @@
 			on:click={closeImageModal}
 		>
 			<button
-				class="absolute top-4 right-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
+				class="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white hover:bg-white/20"
 				on:click={closeImageModal}
 			>
 				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -628,7 +628,7 @@
 	<!-- Full Bio Section -->
 	<section
 		id="profile"
-		class="relative min-h-screen overflow-hidden border-b-2 border-white/10 px-4 pt-16 pb-24 md:py-32"
+		class="relative min-h-screen overflow-hidden border-b-2 border-white/10 px-4 pb-24 pt-16 md:py-32"
 	>
 		<!-- Background with Ken Burns effect -->
 		<div class="absolute inset-0 bg-[url('/BGA_passing_action.JPG')] bg-cover bg-center opacity-10">
@@ -636,7 +636,7 @@
 		</div>
 		<div class="to-primary/30 absolute inset-0 bg-gradient-to-b from-black/30"></div>
 
-		<div class="relative container mx-auto">
+		<div class="container relative mx-auto">
 			<h2
 				class="via-primary-light mb-12 bg-gradient-to-r from-white to-white bg-clip-text text-center text-4xl font-bold tracking-tight md:mb-16 md:text-5xl"
 			>
@@ -767,7 +767,7 @@
 									href={article.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="group hover:shadow-primary/20 block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:bg-black/70 hover:shadow-lg"
+									class="hover:shadow-primary/20 group block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:bg-black/70 hover:shadow-lg"
 								>
 									<div class="flex items-center gap-2">
 										<h4
@@ -798,11 +798,11 @@
 						</div>
 					</div>
 					<div class="mb-8">
-						<h3 class="mb-8 text-2xl font-semibold text-white">Upcoming Schedule</h3>
+						<h3 id="schedule" class="mb-8 text-2xl font-semibold text-white">Upcoming Schedule</h3>
 						<div class="grid grid-cols-1 gap-6">
 							{#each upcomingSchedule as event}
 								<div
-									class="group hover:shadow-primary/20 block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300"
+									class="hover:shadow-primary/20 group block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300"
 								>
 									<div class="flex items-start gap-4">
 										<div
@@ -878,7 +878,7 @@
 	</section>
 
 	<!-- Contact Section -->
-	<section id="contact" class="relative min-h-screen overflow-hidden px-4 pt-16 pb-24 md:py-32">
+	<section id="contact" class="relative min-h-screen overflow-hidden px-4 pb-24 pt-16 md:py-32">
 		<!-- Background with Ken Burns effect -->
 		<div class="absolute inset-0 bg-[url('/action_white.jpg')] bg-cover bg-center opacity-10">
 			<div class="ken-burns-zoom"></div>
@@ -942,7 +942,7 @@
 					href="https://instagram.com/lilianwittwer7"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
+					class="bg-primary hover:bg-primary-dark hover:shadow-primary/20 group transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
 					style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 				>
 					<span class="flex items-center justify-center">
@@ -958,7 +958,7 @@
 					href="https://twitter.com/lilianwittwer"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
+					class="bg-primary hover:bg-primary-dark hover:shadow-primary/20 group transform rounded-full border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg md:px-8 md:py-4"
 					style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 				>
 					<span class="flex items-center justify-center">
@@ -983,7 +983,7 @@
 						type="email"
 						id="email"
 						bind:value={email}
-						class="focus:border-primary focus:ring-primary/20 w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-white placeholder-white/50 focus:ring-2 focus:outline-none"
+						class="focus:border-primary focus:ring-primary/20 w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-white placeholder-white/50 focus:outline-none focus:ring-2"
 						placeholder="your@email.com"
 						required
 					/>
@@ -994,14 +994,14 @@
 						id="message"
 						bind:value={message}
 						rows="4"
-						class="focus:border-primary focus:ring-primary/20 w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-white placeholder-white/50 focus:ring-2 focus:outline-none"
+						class="focus:border-primary focus:ring-primary/20 w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2.5 text-white placeholder-white/50 focus:outline-none focus:ring-2"
 						placeholder="Your message here..."
 						required
 					></textarea>
 				</div>
 				<button
 					type="submit"
-					class="group bg-primary hover:bg-primary-dark hover:shadow-primary/20 w-full transform rounded-lg border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+					class="bg-primary hover:bg-primary-dark hover:shadow-primary/20 group w-full transform rounded-lg border-2 border-white/20 px-6 py-3 text-center font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
 					style="box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
 				>
 					<span class="flex items-center justify-center">
@@ -1023,7 +1023,7 @@
 
 <!-- Floating Navigation -->
 <div
-	class="fixed top-8 left-8 z-40 hidden transform transition-all duration-300 md:block"
+	class="fixed left-8 top-8 z-40 hidden transform transition-all duration-300 md:block"
 	class:opacity-0={!showNav}
 	class:opacity-100={showNav}
 	class:translate-x-0={showNav}
