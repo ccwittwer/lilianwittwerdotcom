@@ -39,23 +39,25 @@ export const galleryItems = [
 	{
 		thumbnail: '/USN_freekick_thumbnail.png',
 		url: 'https://www.youtube.com/embed/W83rNsH3IQM',
-		description: 'Last second game winning free kick vs USN'
+		description: 'Last second game winning free kick vs USN',
+		tags: ['USN', 'Free Kick', 'Game Winning Goal']
 	},
-	{
-		thumbnail: '/action_white.jpg',
-		url: 'https://www.youtube.com/embed/hoaWQwd6NoA',
-		description: 'Defending'
-	},
-	{
-		thumbnail: '/action_winter.jpg',
-		url: 'https://www.youtube.com/embed/Exn_QLdhVTc',
-		description: 'Set Pieces'
-	},
-	{
-		thumbnail: '/action_white.jpg',
-		url: 'https://www.youtube.com/embed/q0w0B5thotk',
-		description: 'Scoring Highlights'
-	},
+	// {
+	// 	thumbnail: '/action_white.jpg',
+	// 	url: 'https://www.youtube.com/embed/hoaWQwd6NoA',
+	// 	description: 'Defending',
+	// 	tags: ['Defending', 'Tackle', 'Game Winning Goal']
+	// },
+	// {
+	// 	thumbnail: '/action_winter.jpg',
+	// 	url: 'https://www.youtube.com/embed/Exn_QLdhVTc',
+	// 	description: 'Set Pieces'
+	// },
+	// {
+	// 	thumbnail: '/action_white.jpg',
+	// 	url: 'https://www.youtube.com/embed/q0w0B5thotk',
+	// 	description: 'Scoring Highlights'
+	// },
 	'/2024_USYNT_announcement_instagram.png',
 	'/all_district.jpeg',
 	'/regional_all_tourney.jpeg',
@@ -167,24 +169,24 @@ export const achievements = [
 /** Upcoming Schedule; first item shows on ticker */
 export const upcomingSchedule = [
 	{
-		date: 'June 15, 2025',
-		time: '10:00 AM',
-		location: 'TSC Training Facility',
-		opponent: 'TSC 2010 ECNL',
-		type: 'Friendly'
+		date: 'June 27, 2025',
+		time: '3:20 PM PDT',
+		location: 'Surf Sports Park - Field 02',
+		opponent: 'South Carolina United ECNL G10',
+		type: 'ECNL North American Cup'
 	},
 	{
-		date: 'June 15, 2025',
-		time: '10:00 AM',
-		location: 'TSC Training Facility',
-		opponent: 'TSC 2010 ECNL',
-		type: 'ECNL League'
-	},
-	{
-		date: 'June 15, 2025',
-		time: '10:00 AM',
-		location: 'TSC Training Facility',
-		opponent: 'TSC 2010 ECNL',
-		type: 'ECNL Showcase'
+		date: 'June 28, 2025',
+		time: 'TBD',
+		location: 'TBD',
+		opponent: 'TBD',
+		type: 'ECNL North American Cup'
 	}
+	// {
+	// 	date: 'June 15, 2025',
+	// 	time: '10:00 AM',
+	// 	location: 'TSC Training Facility',
+	// 	opponent: 'TSC 2010 ECNL',
+	// 	type: 'ECNL Showcase'
+	// }
 ];
