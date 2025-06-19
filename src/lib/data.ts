@@ -159,11 +159,11 @@ export const seasonStats = [
 export const achievements = [
 	'US Soccer U14 National ID Camp 2024',
 	'4x US Soccer Talent ID Center',
-	'TN State Cup U13 Champions 2023',
-	'TN State Cup U15 Finalists 2024',
-	'2x ODP South Region Camp',
 	'2024 High School Region All-Tournament Team',
-	'2024 High School All-District'
+	'2024 High School All-District',
+	'2x ODP South Region Camp',
+	'TN State Cup U13 Champions 2023',
+	'TN State Cup U15 Finalists 2024'
 ];
 
 /** Upcoming Schedule; first item shows on ticker */
@@ -172,6 +172,7 @@ export const upcomingSchedule = [
 		date: 'June 27, 2025',
 		time: '3:20 PM PDT',
 		location: 'Surf Sports Park - Field 02',
+		map: 'https://maps.app.goo.gl/CLRXYqzd3wgvjHsYA',
 		opponent: 'South Carolina United ECNL G10',
 		type: 'ECNL North American Cup'
 	},
@@ -179,6 +180,7 @@ export const upcomingSchedule = [
 		date: 'June 28, 2025',
 		time: 'TBD',
 		location: 'TBD',
+		map: null,
 		opponent: 'TBD',
 		type: 'ECNL North American Cup'
 	}

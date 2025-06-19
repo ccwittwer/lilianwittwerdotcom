@@ -858,7 +858,13 @@
 															d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
 														/>
 													</svg>
-													{event.location}
+													{#if event.map}
+														<a href={event.map} target="_blank" rel="noopener noreferrer">
+															{event.location}
+														</a>
+													{:else}
+														{event.location}
+													{/if}
 												</div>
 												<div
 													class="bg-primary/20 text-primary-light inline-block rounded-full px-2 py-1 text-xs font-medium"
