@@ -37,27 +37,35 @@ export const newsArticles = [
 /** Gallery/Highlights Items */
 export const galleryItems = [
 	{
+		thumbnail: '/action_winter.jpg',
+		url: 'https://www.youtube.com/embed/7OWW56b0v7k',
+		description: 'Attacking & Pace',
+		tags: []
+	},
+	{
+		thumbnail: '/action_white.jpg',
+		url: 'https://www.youtube.com/embed/cUNhUC8W-rc',
+		description: 'Two-Footed Scoring Chances',
+		tags: []
+	},
+	{
+		thumbnail: '/action_winter.jpg',
+		url: 'https://www.youtube.com/embed/hNWgmbmmHCk',
+		description: 'Assisted Chances & Free Kicks',
+		tags: []
+	},
+	{
 		thumbnail: '/USN_freekick_thumbnail.png',
 		url: 'https://www.youtube.com/embed/W83rNsH3IQM',
 		description: 'Last second game winning free kick vs USN',
 		tags: ['USN', 'Free Kick', 'Game Winning Goal']
 	},
-	// {
-	// 	thumbnail: '/action_white.jpg',
-	// 	url: 'https://www.youtube.com/embed/hoaWQwd6NoA',
-	// 	description: 'Defending',
-	// 	tags: ['Defending', 'Tackle', 'Game Winning Goal']
-	// },
-	// {
-	// 	thumbnail: '/action_winter.jpg',
-	// 	url: 'https://www.youtube.com/embed/Exn_QLdhVTc',
-	// 	description: 'Set Pieces'
-	// },
-	// {
-	// 	thumbnail: '/action_white.jpg',
-	// 	url: 'https://www.youtube.com/embed/q0w0B5thotk',
-	// 	description: 'Scoring Highlights'
-	// },
+	{
+		thumbnail: '/action_white.jpg',
+		url: 'https://www.youtube.com/embed/HDbgXoHLR_g',
+		description: 'Transition to attack',
+		tags: []
+	},
 	'/2024_USYNT_announcement_instagram.png',
 	'/all_district.jpeg',
 	'/regional_all_tourney.jpeg',
