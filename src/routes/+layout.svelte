@@ -1,6 +1,9 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+	import { initGA, trackPageView } from '$lib/analytics';
 	import Ticker from '$lib/components/Ticker.svelte';
 	import { gameStats } from '$lib/data';
+	import { onMount } from 'svelte';
 	import '../app.css';
 
 	// onMount(() => {
@@ -9,6 +12,16 @@
 	// 		goto('/profile');
 	// 	}
 	// });
+
+	onMount(() => {
+		// Initialize Google Analytics
+		initGA();
+	});
+
+	// Track page views
+	$: if (typeof window !== 'undefined') {
+		trackPageView($page.url.pathname);
+	}
 </script>
 
 <slot />

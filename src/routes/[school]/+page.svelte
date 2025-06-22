@@ -979,7 +979,7 @@
 			</div>
 
 			<!-- Contact Form -->
-			<form
+			<!-- <form
 				class="mx-auto mt-16 max-w-xl rounded-xl border border-white/10 bg-black/50 p-8 backdrop-blur-sm"
 				on:submit|preventDefault={handleSubmit}
 			>
@@ -1022,7 +1022,7 @@
 						Send Message
 					</span>
 				</button>
-			</form>
+			</form> -->
 		</div>
 	</section>
 </main>
