@@ -37,19 +37,19 @@ export const newsArticles = [
 /** Gallery/Highlights Items */
 export const galleryItems = [
 	{
-		thumbnail: '/action_winter.jpg',
+		thumbnail: '/bga_dribbling.JPG',
 		url: 'https://www.youtube.com/embed/7OWW56b0v7k',
 		description: 'Attacking & Pace',
 		tags: []
 	},
 	{
-		thumbnail: '/action_white.jpg',
+		thumbnail: '/IMG_0700.JPEG',
 		url: 'https://www.youtube.com/embed/cUNhUC8W-rc',
 		description: 'Two-Footed Scoring Chances',
 		tags: []
 	},
 	{
-		thumbnail: '/action_winter.jpg',
+		thumbnail: '/BGA_passing_action_sm.jpeg',
 		url: 'https://www.youtube.com/embed/hNWgmbmmHCk',
 		description: 'Assisted Chances & Free Kicks',
 		tags: []
