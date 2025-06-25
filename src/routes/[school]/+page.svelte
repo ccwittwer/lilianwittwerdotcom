@@ -183,7 +183,7 @@
 			<img
 				src="/bga_posed_pointing_cutout.png"
 				alt="Lilian Wittwer pointing"
-				class="absolute bottom-0 left-0 z-20 h-auto w-1/3 max-w-xs object-contain shadow-2xl md:w-1/2 md:max-w-sm"
+				class="absolute bottom-0 left-0 z-20 h-auto w-1/2 max-w-xs object-contain shadow-2xl md:w-1/2 md:max-w-sm"
 				style="filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
 			/>
 		</div>
