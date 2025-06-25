@@ -140,6 +140,7 @@
 
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
@@ -166,9 +167,25 @@
 			<div
 				class="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-black/30 to-transparent md:bg-gradient-to-r"
 			></div>
-			<div
-				class="animate-ken-burns absolute inset-0 bg-[url('/action_winter.jpg')] bg-cover bg-center"
-			></div>
+			<!-- Background Video -->
+			<video
+				class="absolute inset-0 h-full w-full object-cover"
+				autoplay
+				muted
+				loop
+				playsinline
+				poster="/action_winter.jpg"
+			>
+				<source src="/bg_sequence_compressed.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+			<!-- Cutout Overlay -->
+			<img
+				src="/bga_posed_pointing_cutout.png"
+				alt="Lilian Wittwer pointing"
+				class="absolute bottom-0 left-0 z-20 h-auto w-1/3 max-w-xs object-contain shadow-2xl md:w-1/2 md:max-w-sm"
+				style="filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));"
+			/>
 		</div>
 
 		<!-- Content - Full width on mobile, half on desktop -->
