@@ -192,6 +192,12 @@
 		<div
 			class="from-primary/95 via-secondary/95 to-tertiary/95 relative flex w-full flex-col justify-center bg-gradient-to-br p-6 md:w-1/2 md:p-12"
 		>
+			<!-- TSC Logo Background Watermark -->
+			<img
+				src="/TSC_logo.svg"
+				alt="TSC Logo Background"
+				class="absolute right-4 top-1/4 h-64 w-64 -translate-y-1/2 opacity-10 md:right-8 md:h-96 md:w-96"
+			/>
 			<div class="mx-auto w-full max-w-2xl">
 				<!-- Player Name and Position -->
 				<div class="mb-8 md:mb-8">
