@@ -186,10 +186,10 @@ export const upcomingSchedule = [
 	},
 	{
 		date: 'June 28, 2025',
-		time: 'TBD',
-		location: 'TBD',
-		map: null,
-		opponent: 'TBD',
+		time: '9:50 AM PDT',
+		location: 'Surf Sports Park - Field B',
+		map: 'https://maps.app.goo.gl/CLRXYqzd3wgvjHsYA',
+		opponent: 'South Shore Select',
 		type: 'ECNL North American Cup'
 	}
 	// {
