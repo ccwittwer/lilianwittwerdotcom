@@ -6,8 +6,8 @@
 		newsArticles,
 		playerInfo,
 		playerInfoList,
-		seasonStats,
-		upcomingSchedule
+		scheduleEvents,
+		seasonStats
 	} from '$lib/data';
 	import { onMount } from 'svelte';
 
@@ -27,6 +27,9 @@
 	// Image modal state
 	let showImageModal = false;
 	let selectedImage = '';
+
+	$: upcomingEvents = scheduleEvents.filter((event) => new Date(event.date) >= new Date());
+	$: recentEvents = scheduleEvents.filter((event) => new Date(event.date) < new Date());
 
 	function openImageModal(item: string | { thumbnail: string; url: string; description: string }) {
 		if (typeof item === 'string') {
@@ -820,85 +823,178 @@
 							{/each}
 						</div>
 					</div>
+
 					<div class="mb-8">
 						<h3 id="schedule" class="mb-8 text-2xl font-semibold text-white">Upcoming Schedule</h3>
 						<div class="grid grid-cols-1 gap-6">
-							{#each upcomingSchedule as event}
-								<div
-									class="hover:shadow-primary/20 group block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300"
-								>
-									<div class="flex items-start gap-4">
-										<div
-											class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-lg border border-white/10 bg-black/30 text-center"
-										>
-											<span class="text-sm font-medium text-white/60"
-												>{new Date(event.date).toLocaleString('default', { month: 'short' })}</span
+							{#if upcomingEvents.length > 0}
+								{#each upcomingEvents as event}
+									<div
+										class="hover:shadow-primary/20 group block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300"
+									>
+										<div class="flex items-start gap-4">
+											<div
+												class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-lg border border-white/10 bg-black/30 text-center"
 											>
-											<span class="text-lg font-bold text-white"
-												>{new Date(event.date).getDate()}</span
-											>
-										</div>
-										<div class="flex-1">
-											<h4
-												class="group-hover:text-primary-light mb-2 text-lg font-semibold text-white"
-											>
-												{event.opponent}
-											</h4>
-											<div class="space-y-1">
-												<div class="flex items-center text-sm text-white/60">
-													<svg
-														class="mr-2 h-4 w-4"
-														fill="none"
-														stroke="currentColor"
-														viewBox="0 0 24 24"
-													>
-														<path
-															stroke-linecap="round"
-															stroke-linejoin="round"
-															stroke-width="2"
-															d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-														/>
-													</svg>
-													{event.time}
-												</div>
-												<div class="flex items-center text-sm text-white/60">
-													<svg
-														class="mr-2 h-4 w-4"
-														fill="none"
-														stroke="currentColor"
-														viewBox="0 0 24 24"
-													>
-														<path
-															stroke-linecap="round"
-															stroke-linejoin="round"
-															stroke-width="2"
-															d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-														/>
-														<path
-															stroke-linecap="round"
-															stroke-linejoin="round"
-															stroke-width="2"
-															d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-														/>
-													</svg>
-													{#if event.map}
-														<a href={event.map} target="_blank" rel="noopener noreferrer">
-															{event.location}
-														</a>
-													{:else}
-														{event.location}
-													{/if}
-												</div>
-												<div
-													class="bg-primary/20 text-primary-light inline-block rounded-full px-2 py-1 text-xs font-medium"
+												<span class="text-sm font-medium text-white/60"
+													>{new Date(event.date).toLocaleString('default', {
+														month: 'short'
+													})}</span
 												>
-													{event.type}
+												<span class="text-lg font-bold text-white"
+													>{new Date(event.date).getDate()}</span
+												>
+											</div>
+											<div class="flex-1">
+												<h4
+													class="group-hover:text-primary-light mb-2 text-lg font-semibold text-white"
+												>
+													{event.opponent}
+												</h4>
+												<div class="space-y-1">
+													<div class="flex items-center text-sm text-white/60">
+														<svg
+															class="mr-2 h-4 w-4"
+															fill="none"
+															stroke="currentColor"
+															viewBox="0 0 24 24"
+														>
+															<path
+																stroke-linecap="round"
+																stroke-linejoin="round"
+																stroke-width="2"
+																d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+															/>
+														</svg>
+														{event.time}
+													</div>
+													<div class="flex items-center text-sm text-white/60">
+														<svg
+															class="mr-2 h-4 w-4"
+															fill="none"
+															stroke="currentColor"
+															viewBox="0 0 24 24"
+														>
+															<path
+																stroke-linecap="round"
+																stroke-linejoin="round"
+																stroke-width="2"
+																d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+															/>
+															<path
+																stroke-linecap="round"
+																stroke-linejoin="round"
+																stroke-width="2"
+																d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+															/>
+														</svg>
+														{#if event.map}
+															<a href={event.map} target="_blank" rel="noopener noreferrer">
+																{event.location}
+															</a>
+														{:else}
+															{event.location}
+														{/if}
+													</div>
+													<div
+														class="bg-primary/20 text-primary-light inline-block rounded-full px-2 py-1 text-xs font-medium"
+													>
+														{event.type}
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							{/each}
+								{/each}
+							{:else}
+								<div class="text-center text-white/60">No upcoming events</div>
+							{/if}
+						</div>
+					</div>
+
+					<div class="mb-8">
+						<h3 class="mb-8 text-2xl font-semibold text-white">Recent Results</h3>
+						<div class="grid grid-cols-1 gap-6">
+							{#if recentEvents.length > 0}
+								{#each recentEvents as event}
+									<div
+										class="hover:shadow-primary/20 group block transform rounded-xl border border-white/10 bg-black/50 p-4 transition-all duration-300"
+									>
+										<div class="flex items-start gap-4">
+											<div
+												class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-lg border border-white/10 bg-black/30 text-center"
+											>
+												<span class="text-sm font-medium text-white/60"
+													>{new Date(event.date).toLocaleString('default', {
+														month: 'short'
+													})}</span
+												>
+												<span class="text-lg font-bold text-white"
+													>{new Date(event.date).getDate()}</span
+												>
+											</div>
+											<div class="flex-1">
+												<div class="mb-2 flex items-center justify-between">
+													<h4
+														class="group-hover:text-primary-light text-lg font-semibold text-white"
+													>
+														{event.team} vs {event.opponent}
+													</h4>
+													<div
+														class="rounded-full px-3 py-1 text-sm font-bold {event.result.startsWith(
+															'W'
+														)
+															? 'bg-green-500/20 text-green-400'
+															: event.result.startsWith('L')
+																? 'bg-red-500/20 text-red-400'
+																: 'bg-yellow-500/20 text-yellow-400'}"
+													>
+														{event.result}
+													</div>
+												</div>
+												<div class="space-y-1">
+													<div class="flex items-center text-sm text-white/60">
+														<svg
+															class="mr-2 h-4 w-4"
+															fill="none"
+															stroke="currentColor"
+															viewBox="0 0 24 24"
+														>
+															<path
+																stroke-linecap="round"
+																stroke-linejoin="round"
+																stroke-width="2"
+																d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+															/>
+															<path
+																stroke-linecap="round"
+																stroke-linejoin="round"
+																stroke-width="2"
+																d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+															/>
+														</svg>
+														{event.location}
+													</div>
+													<div class="flex items-center justify-between">
+														<div
+															class="bg-primary/20 text-primary-light inline-block rounded-full px-2 py-1 text-xs font-medium"
+														>
+															{event.type}
+														</div>
+														{#if event.highlights}
+															<div class="text-sm text-white/80">
+																{event.highlights}
+															</div>
+														{/if}
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								{/each}
+							{:else}
+								<div class="text-center text-white/60">No recent events</div>
+							{/if}
 						</div>
 					</div>
 				</div>

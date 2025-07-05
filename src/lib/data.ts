@@ -1,21 +1,84 @@
-/** Ticker Items */
-export const gameStats = [
-	// { category: 'ECNL', content: 'TSC 3 - 1 South Carolina • 2 Goals, 1 Assist' },
+export interface ScheduleEvent {
+	date: string;
+	time: string;
+	location: string;
+	map?: string;
+	team: string;
+	opponent: string;
+	type: string;
+	result: string;
+	score: string;
+	teamScore: string;
+	opponentScore: string;
+	highlights: string | null;
+	league: string;
+}
 
-	// { category: 'ECNL', content: '2024/25 SEASON - 15 Goals • 12 Assists • 20 Games' },
+/** Schedule Events */
+export const scheduleEvents: ScheduleEvent[] = [
+	{
+		date: 'June 30, 2025',
+		time: '',
+		team: 'Tennessee Soccer Club',
+		opponent: 'Oregon Surf',
+		location: 'Surf Sports Park, Del Mar, CA',
+		result: 'W 4-2',
+		score: '4-2',
+		teamScore: '4',
+		opponentScore: '2',
+		type: 'ECNL North American Cup',
+		highlights: null,
+		league: 'ECNL'
+	},
+	{
+		date: 'June 28, 2025',
+		time: '',
+		team: 'Tennessee Soccer Club',
+		opponent: 'South Shore Select',
+		location: 'Surf Sports Park, Del Mar, CA',
+		result: 'W 2-1',
+		score: '2-1',
+		teamScore: '2',
+		opponentScore: '1',
+		type: 'ECNL North American Cup',
+		highlights: null,
+		league: 'ECNL'
+	},
+	{
+		date: 'June 27, 2025',
+		time: '',
+		team: 'Tennessee Soccer Club',
+		opponent: 'South Carolina United',
+		location: 'Surf Sports Park, Del Mar, CA',
+		result: 'L 0-1',
+		score: '0-1',
+		teamScore: '0',
+		opponentScore: '1',
+		type: 'ECNL North American Cup',
+		highlights: null,
+		league: 'ECNL'
+	}
+];
+
+/** Ticker Items */
+const tickerInfo = [
 	{
 		category: 'NEWS',
 		content: 'BGA battles, falls short of ECS in state quarterfinals - Oct 2024',
 		url: 'https://www.williamsonherald.com/sports/soccer-bga-battles-falls-short-of-ecs-in-state-quarterfinals/article_2825ba52-8f11-11ef-aa5b-23a252da8271.html'
 	},
-	// { category: 'HIGH SCHOOL', content: '2024 SEASON - 17 Goals • 12 Assists • 20 Games' },
-	// { category: 'HIGH SCHOOL', content: '2025 SEASON - 17 Goals • 12 Assists • 20 Games' },
-	// { category: 'SEASON', content: '18 Goals • 12 Assists • 20 Games' },
-	// { category: 'CAREER', content: '45 Goals • 38 Assists • 60 Games' },
-	// { category: 'HIGHLIGHTS', content: 'Hat Trick vs. Ensworth • 4 Goals vs. Brentwood' },
 	{ category: 'AWARDS', content: '2024 High School Region All-Tournament Team' },
 	{ category: 'AWARDS', content: '2024 High School All-District' }
 ];
+
+const tickerGames = scheduleEvents
+	.filter((event) => new Date(event.date) < new Date())
+	.map((event) => ({
+		category: 'ECNL',
+		content: `${event.date} -  ${event.team} ${event.teamScore} - ${event.opponentScore} ${event.opponent}`
+	}));
+
+export const gameStats = [...tickerGames, ...tickerInfo];
 
 /** News Articles */
 export const newsArticles = [
@@ -27,7 +90,7 @@ export const newsArticles = [
 	},
 	{
 		title:
-			'Eighty Players Gather Outside of San Diego for Second Girls’ U-14 National Identification Camp of 2024',
+			"Eighty Players Gather Outside of San Diego for Second Girls' U-14 National Identification Camp of 2024",
 		source: 'US Soccer',
 		date: 'May 31, 2024',
 		url: 'https://www.ussoccer.com/stories/2024/05/eighty-players-gather-outside-of-san-diego-for-second-girls-u-14-national-identification-camp-of-2024'
@@ -172,31 +235,4 @@ export const achievements = [
 	'2x ODP South Region Camp',
 	'TN State Cup U13 Champions 2023',
 	'TN State Cup U15 Finalists 2024'
-];
-
-/** Upcoming Schedule; first item shows on ticker */
-export const upcomingSchedule = [
-	{
-		date: 'June 27, 2025',
-		time: '3:20 PM PDT',
-		location: 'Surf Sports Park - Field 02',
-		map: 'https://maps.app.goo.gl/CLRXYqzd3wgvjHsYA',
-		opponent: 'South Carolina United ECNL G10',
-		type: 'ECNL North American Cup'
-	},
-	{
-		date: 'June 28, 2025',
-		time: '9:50 AM PDT',
-		location: 'Surf Sports Park - Field B',
-		map: 'https://maps.app.goo.gl/CLRXYqzd3wgvjHsYA',
-		opponent: 'South Shore Select',
-		type: 'ECNL North American Cup'
-	}
-	// {
-	// 	date: 'June 15, 2025',
-	// 	time: '10:00 AM',
-	// 	location: 'TSC Training Facility',
-	// 	opponent: 'TSC 2010 ECNL',
-	// 	type: 'ECNL Showcase'
-	// }
 ];

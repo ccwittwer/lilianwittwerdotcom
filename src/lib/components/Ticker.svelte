@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { upcomingSchedule } from '$lib/data';
+	import { scheduleEvents } from '$lib/data';
 	import { onMount } from 'svelte';
 
 	export let gameStats: Array<{ category: string; content: string; url?: string }>;
@@ -7,7 +7,9 @@
 	let currentStatIndex = 0;
 	let isVisible = true;
 
-	let nextGame = upcomingSchedule[0];
+	$: upcomingEvents = scheduleEvents.filter((event) => event.date >= new Date().toISOString());
+
+	let nextGame = upcomingEvents && upcomingEvents.length > 0 ? upcomingEvents[0] : null;
 
 	function cycleStats() {
 		isVisible = false;
@@ -55,13 +57,17 @@
 			<div class="flex items-center gap-4">
 				<div class="text-ticker border-r border-white pr-4 font-bold">NEXT GAME</div>
 				<div class="text-white">
-					<a href="#schedule">
-						<span class="font-medium">{nextGame.date} • {nextGame.time}</span>
-						<span class="mx-2">•</span>
-						<span>vs {nextGame.opponent}</span>
-						<!-- <span class="mx-2">•</span> -->
-						<!-- <span>{nextGame.location}</span> -->
-					</a>
+					{#if nextGame}
+						<a href="#schedule">
+							<span class="font-medium">{nextGame.date} • {nextGame.time}</span>
+							<span class="mx-2">•</span>
+							<span>vs {nextGame.opponent}</span>
+							<!-- <span class="mx-2">•</span> -->
+							<!-- <span>{nextGame.location}</span> -->
+						</a>
+					{:else}
+						<span class="text-white">Schedule coming soon</span>
+					{/if}
 				</div>
 			</div>
 		</div>
